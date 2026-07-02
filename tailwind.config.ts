@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 
 /**
  * Placeholder brand tokens modeled on the live zineps.com identity.
- * Swap these values (and nothing else) when real brand tokens are ready —
+ * Swap these values (and nothing else) when real brand tokens are ready,
  * see CONTENT_TODO.md.
  */
 const config: Config = {
@@ -40,7 +40,7 @@ const config: Config = {
           900: "#1A1A1A",
         },
         /**
-         * Fashion-specific secondary accent — warm terracotta, used sparingly
+         * Fashion-specific secondary accent, warm terracotta, used sparingly
          * (badges, icon backgrounds, tag pills) alongside the inherited brand teal.
          */
         clay: {

@@ -49,12 +49,12 @@ export const nl: Dictionary = {
     eyebrow: "Waarom modemerken overstappen",
     heading: "Drie problemen die mode maar al te goed kent",
     subheading:
-      "Fashion kent andere economische wetten dan de rest van ecommerce — hoge retourpercentages, strikte verwachtingen over pasvorm, en klanten die je beoordelen op de unboxingervaring. Zineps is daarop gebouwd.",
+      "Fashion kent andere economische wetten dan de rest van ecommerce: hoge retourpercentages, strikte verwachtingen over pasvorm, en klanten die je beoordelen op de unboxingervaring. Zineps is daarop gebouwd.",
     items: {
       multiCarrier: {
         title: "Tarieven die singlecarrier deals verslaan",
         description:
-          "Vergelijk elke carrier tegelijk en stuur elk pakket automatisch naar de goedkoopste of snelste optie — nooit meer te veel betalen voor een contract dat nooit paste bij je volume.",
+          "Vergelijk elke carrier tegelijk en stuur elk pakket automatisch naar de goedkoopste of snelste optie, nooit meer te veel betalen voor een contract dat nooit paste bij je volume.",
       },
       returns: {
         title: "Retouren gebouwd voor pasvorm, niet frictie",
@@ -65,7 +65,7 @@ export const nl: Dictionary = {
       international: {
         title: "Grensoverschrijdend EU, zonder gedoe",
         description:
-          "Verstuur naar elke Europese markt met douane, labels en levertijden geregeld — zodat een klant in Milaan dezelfde ervaring krijgt als eentje om de hoek.",
+          "Verstuur naar elke Europese markt met douane, labels en levertijden geregeld, zodat een klant in Milaan dezelfde ervaring krijgt als eentje om de hoek.",
       },
     },
   },
@@ -73,12 +73,12 @@ export const nl: Dictionary = {
     eyebrow: "Alles op één rek",
     heading: "De complete garderobe aan verzendtools",
     subheading:
-      "Van de dropkalender tot de voordeur — functies die mode spreken, geen vracht.",
+      "Van de dropkalender tot de voordeur: functies die mode spreken, geen vracht.",
     items: {
       tracking: {
         title: "Gebrande trackingpagina's",
         description:
-          "Tracking die eruitziet als jouw winkel, niet als een koerier — met ruimte voor upsell.",
+          "Tracking die eruitziet als jouw winkel, niet als een koerier, met ruimte voor upsell.",
       },
       checkoutEstimates: {
         title: "Levertijden bij checkout",
@@ -119,7 +119,7 @@ export const nl: Dictionary = {
       {
         title: "Stel je verzendregels in",
         description:
-          "Goedkoopst, snelst of groenst — je stelt de logica één keer in en wij routeren elk pakket.",
+          "Goedkoopst, snelst of groenst: je stelt de logica één keer in en wij routeren elk pakket.",
       },
       {
         title: "Verstuur & brand de reis",
@@ -129,7 +129,7 @@ export const nl: Dictionary = {
       {
         title: "Optimaliseer elk seizoen",
         description:
-          "Analyses tonen waar je te veel betaalt en welke SKU's terugkomen — zodat de volgende drop slimmer verzendt.",
+          "Analyses tonen waar je te veel betaalt en welke SKU's terugkomen, zodat de volgende drop slimmer verzendt.",
       },
     ],
   },
@@ -137,7 +137,7 @@ export const nl: Dictionary = {
     eyebrow: "Klantverhaal · Burker",
     heading: "Hoe een juwelen & horlogehuis groeide naar 367.000 zendingen",
     subheading:
-      "Burker is een sieraden en horlogeretailer die wereldwijd verzendt vanuit het magazijn in Zaandam. Dit is hoe ze hun internationale volume opschaalden met Zineps — in hun eigen woorden.",
+      "Burker is een sieraden en horlogeretailer die wereldwijd verzendt vanuit het magazijn in Zaandam. Dit is hoe ze hun internationale volume opschaalden met Zineps, in hun eigen woorden.",
     playLabel: "Bekijk de Burker klantfilm",
     videoTitle: "Burker × Zineps: opschalen naar 367.000 zendingen per jaar",
     stats: [
@@ -167,7 +167,7 @@ export const nl: Dictionary = {
       {
         question: "Hoe regelt Zineps moderetouren en maatruil?",
         answer:
-          "Retouren zijn het hart van mode, dus we behandelen ze als verkoopmoment. Klanten krijgen een selfservice portaal met directe ruillabels en maatruil in één tik — zo wordt een verkeerde maat een behouden order in plaats van een terugbetaling.",
+          "Retouren zijn het hart van mode, dus we behandelen ze als verkoopmoment. Klanten krijgen een selfservice portaal met directe ruillabels en maatruil in één tik, zo wordt een verkeerde maat een behouden order in plaats van een terugbetaling.",
       },
       {
         question: "Kan het een middernachtdrop of piekseizoen aan?",
@@ -187,14 +187,14 @@ export const nl: Dictionary = {
       {
         question: "Is de trackingervaring echt gebrand?",
         answer:
-          "Volledig. Trackingpagina's dragen jouw logo, kleuren en toneofvoice — met ruimte voor upsell — zodat het moment na aankoop aanvoelt als jouw winkel, niet als een koerier.",
+          "Volledig. Trackingpagina's dragen jouw logo, kleuren en toneofvoice, met ruimte voor upsell, zodat het moment na aankoop aanvoelt als jouw winkel, niet als een koerier.",
       },
     ],
   },
   ctaBand: {
     heading: "Verstuur je volgende drop op de slimme manier",
     subheading:
-      "Zie een live tarievenvergelijking op je eigen routes. Geen contracten, geen carrier lockin — gewoon een walkthrough van 20 minuten.",
+      "Zie een live tarievenvergelijking op je eigen routes. Geen contracten, geen carrier lockin, gewoon een walkthrough van 20 minuten.",
     primaryCta: "Demo boeken",
   },
   contactForm: {
@@ -212,8 +212,8 @@ export const nl: Dictionary = {
       volumeOptions: {
         placeholder: "Kies een bereik",
         low: "Minder dan 1.000 bestellingen",
-        mid: "1.000–10.000 bestellingen",
-        high: "10.000–50.000 bestellingen",
+        mid: "1.000-10.000 bestellingen",
+        high: "10.000-50.000 bestellingen",
         enterprise: "50.000+ bestellingen",
       },
       message: "Wat wil je oplossen?",
@@ -222,7 +222,7 @@ export const nl: Dictionary = {
     },
     submit: "Vraag een demo aan",
     submitting: "Versturen...",
-    successTitle: "Bedankt — we hebben je aanvraag ontvangen.",
+    successTitle: "Bedankt, we hebben je aanvraag ontvangen.",
     successBody:
       "Een van onze teamleden neemt binnen één werkdag contact met je op.",
     errorTitle: "Er ging iets mis",

@@ -56,12 +56,7 @@ export function Footer() {
 
         <div className="mt-11 flex flex-wrap items-center justify-between gap-3 border-t border-ink-900/[0.07] pt-[22px]">
           <span className="flex items-center gap-2.5 text-[13px] text-ink-400">
-            <svg viewBox="0 0 100 100" className="h-5 w-5 text-brand-500" aria-hidden="true">
-              <g fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round">
-                <circle cx="50" cy="50" r="42" />
-                <path d="M28 60l14-14 8 8 22-24" />
-              </g>
-            </svg>
+            <Image src="/images/logo-icon.png" alt="" width={40} height={40} aria-hidden="true" className="h-5 w-5" />
             {footer.copyright}
           </span>
           <span className="font-mono text-[11.5px] tracking-[0.04em] text-ink-400">{footer.madeLine}</span>

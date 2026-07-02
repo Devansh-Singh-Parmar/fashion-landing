@@ -30,7 +30,7 @@ function formatTime(seconds: number): string {
 /**
  * Poster-only until the video scrolls near the viewport, at which point the
  * real <video> mounts with preload="auto" so it's already buffering by the
- * time someone presses play — clicking should feel instant instead of
+ * time someone presses play, so clicking should feel instant instead of
  * waiting on a cold fetch. Controls are fully custom (no native <video
  * controls>) to match the site's visual language.
  */
@@ -75,7 +75,7 @@ export function CaseStudyVideo({ playLabel, videoTitle }: CaseStudyVideoProps) {
       return;
     }
     videoRef.current.play().catch(() => {
-      // Autoplay can be blocked by the browser — the visible play button remains available.
+      // Autoplay can be blocked by the browser; the visible play button remains available.
     });
   }, [hasStarted]);
 

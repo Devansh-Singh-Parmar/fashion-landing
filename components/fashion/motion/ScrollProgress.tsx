@@ -3,7 +3,7 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 
 /**
- * Thin fixed progress bar tracking scroll position through the page — the
+ * Thin fixed progress bar tracking scroll position through the page, the
  * "scroller" half of the scroll-stopper/scroller pairing. Spring-smoothed so
  * it doesn't feel like it's stepping in sync with raw scroll events.
  */

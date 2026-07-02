@@ -27,7 +27,7 @@ const BAR_COLORS = [
 const SIDEBAR_ITEMS = ["Dashboard", "Shipments", "Returns", "Carriers", "Analytics"];
 
 /**
- * A hand-built illustration of a shipping dashboard — not a real screenshot.
+ * A hand-built illustration of a shipping dashboard, not a real screenshot.
  * Stands in for product UI until a real capture replaces it (see CONTENT_TODO.md).
  */
 export function HeroMockUI({ imageAlt }: HeroMockUIProps) {
