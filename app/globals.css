@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-paper text-ink-900 antialiased;
+  }
+
+  ::selection {
+    background: #70cab9;
+    color: #0d1f1b;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-clay-500 ring-offset-2 ring-offset-paper;
+  }
+}
+
+@layer utilities {
+  /* Gentle "stopper": sections settle into place when a scroll gesture ends
+     near a boundary, without trapping the user like mandatory snap would. */
+  .snap-scroller {
+    scroll-snap-type: y proximity;
+  }
+
+  .snap-section {
+    scroll-snap-align: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .snap-scroller {
+    scroll-snap-type: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
