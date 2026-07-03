@@ -6,12 +6,13 @@ import Image from "next/image";
 import { Captions, Maximize, Minimize, Pause, Play, Volume2, VolumeX } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/useLanguage";
 import { cx } from "@/components/fashion/ui/cx";
+import { BASE_PATH } from "@/lib/basePath";
 
-const POSTER_SRC = "/videos/burker-case-study-poster.jpg";
-const WEBM_SRC = "/videos/burker-case-study.webm";
-const MP4_SRC = "/videos/burker-case-study.mp4";
-const CAPTIONS_EN_SRC = "/videos/burker-case-study.en.vtt";
-const CAPTIONS_NL_SRC = "/videos/burker-case-study.nl.vtt";
+const POSTER_SRC = `${BASE_PATH}/videos/burker-case-study-poster.jpg`;
+const WEBM_SRC = `${BASE_PATH}/videos/burker-case-study.webm`;
+const MP4_SRC = `${BASE_PATH}/videos/burker-case-study.mp4`;
+const CAPTIONS_EN_SRC = `${BASE_PATH}/videos/burker-case-study.en.vtt`;
+const CAPTIONS_NL_SRC = `${BASE_PATH}/videos/burker-case-study.nl.vtt`;
 
 interface CaseStudyVideoProps {
   playLabel: string;

@@ -15,9 +15,8 @@ minimal rework. See **Integration notes** below.
 - Framer Motion for scroll-reveal, hero entrance, animated counters, card tilt, scroll progress, and the
   language cross-fade (`components/fashion/motion/`), chosen over GSAP as the idiomatic React/Next.js
   motion library
-- A fixed scroll-progress bar and a section dot-nav (`ScrollProgress` / `SectionScroller`) pair with a
-  CSS `scroll-snap-type: y proximity` on every section for a gentle "settle into place" feel without
-  trapping the scroll
+- A fixed scroll-progress bar (`ScrollProgress`) pairs with a CSS `scroll-snap-type: y proximity` on every
+  section for a gentle "settle into place" feel without trapping the scroll
 - next/font (Geist + Geist Mono + Poppins, matching zineps.com's own production font stack) for font
   optimization — Poppins (500/600 only) is scoped to the hero headline, section headings, and case-study
   stat numbers; Geist is the default body/UI font everywhere else
@@ -31,8 +30,10 @@ npm install
 npm run dev
 ```
 
-Visit [http://localhost:3000/fashion](http://localhost:3000/fashion). (The root `/` route redirects to
-`/fashion` for convenience during local development, see Integration notes.)
+Visit [http://localhost:3000/fashion](http://localhost:3000/fashion). The page itself lives at the app
+root (`app/page.tsx`); the `/fashion` prefix comes from `basePath: "/fashion"` in `next.config.ts`, which
+matches where this project is mounted in production (`zineps.com/fashion`, served from a standalone Vercel
+deployment).
 
 ## Build
 
@@ -53,20 +54,19 @@ npm run lint
 
 ```
 app/
-  fashion/
-    page.tsx        # the /fashion route, Server Component, owns metadata + JSON-LD
+  page.tsx            # the app-root route, Server Component, owns metadata + JSON-LD
+                      # (served at /fashion via next.config.ts's basePath, see Running locally)
   api/
     contact/
-      route.ts       # placeholder contact form endpoint (logs + returns success)
+      route.ts       # contact form endpoint, sends via Resend (see app/api/contact/route.ts)
   layout.tsx          # root layout, fonts, <html>/<body>
-  page.tsx            # redirects "/" -> "/fashion" (dev convenience only, see below)
   globals.css
 
 components/
   fashion/
     ui/               # generic primitives: Button, Section, Card, Container, cx
     motion/           # Framer Motion helpers: Reveal, TiltCard, AnimatedCounter, HeroMockUI,
-                      # ScrollProgress, SectionScroller, etc.
+                      # ScrollProgress, etc.
     icons/            # custom fashion-motif SVG icons: hanger, garment tag, shoe, bag, watch
     Nav.tsx
     LanguageSwitcher.tsx
@@ -153,9 +153,11 @@ video bytes off the Next.js server directly.
 
 When this page is ready to move into the primary Next.js codebase:
 
-1. **Move the fashion-namespaced folders in.** Copy `app/fashion/` and `components/fashion/` directly into
-   the target repo's `app/` and `components/` directories. Everything fashion-specific is namespaced under
-   `fashion/` so it should not collide with existing routes or components.
+1. **Move the fashion-namespaced folders in.** This standalone repo serves the page from the app root
+   (`app/page.tsx`) with `basePath: "/fashion"` in `next.config.ts` doing the URL prefixing. In the main
+   repo, drop `basePath`/`assetPrefix` from `next.config.ts` (the main site already has its own) and instead
+   move the page into a real `app/fashion/page.tsx` route there. `components/fashion/` copies over as-is,
+   already namespaced so it shouldn't collide with existing components.
 2. **Move `lib/i18n/` in**, or merge it with an existing i18n setup if the main site already has one. If the
    main site already has a `LanguageProvider`/`useLanguage` (it should, since this replicates its pattern),
    reuse the existing implementation and just add this page's dictionary keys to the existing dictionaries
@@ -165,11 +167,13 @@ When this page is ready to move into the primary Next.js codebase:
    file. If the main site's Tailwind config already defines equivalent tokens, remap the fashion components'
    class names (`bg-brand-500`, `text-ink-900`, etc.) to the existing token names instead of merging two
    parallel color systems.
-4. **Wire the contact API route.** `app/api/contact/route.ts` currently only logs the payload and returns
-   `{ ok: true }`. Replace the `// TODO: wire to real CRM/email endpoint` block with a call to the real
-   CRM/email service used by the rest of zineps.com's marketing forms.
-5. **Remove the dev-only root redirect.** `app/page.tsx` (`redirect("/fashion")`) exists only so `/` is
-   useful in this standalone repo during local development. Delete it; the main site already owns `/`.
+4. **Reconcile the contact API route.** `app/api/contact/route.ts` sends via Resend using
+   `RESEND_API_KEY`. Either keep that integration (add the env var and a verified sending domain in the
+   main repo's Resend account) or replace it with whatever CRM/email service the rest of zineps.com's
+   marketing forms already use.
+5. **Drop the standalone routing config.** Once the page lives at `app/fashion/page.tsx` in the main repo,
+   `basePath` and `assetPrefix` in `next.config.ts` are no longer needed there, those exist only so this
+   repo can deploy standalone with `/fashion` URLs.
 6. **Swap the footer.** `components/fashion/Footer.tsx` is intentionally minimal and marked as swappable.
    Once merged, either replace it with the main site's real shared footer component, or confirm the
    product/company links and contact details before keeping it as-is.

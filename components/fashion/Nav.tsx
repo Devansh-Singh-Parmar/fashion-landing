@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/useLanguage";
 import { LanguageSwitcher } from "@/components/fashion/LanguageSwitcher";
 import { cx } from "@/components/fashion/ui/cx";
+import { BASE_PATH } from "@/lib/basePath";
 
 type NavTheme = "light" | "dark";
 
@@ -80,7 +81,7 @@ export function Nav() {
       <div className="mx-auto flex h-16 w-full max-w-container items-center justify-between px-6 sm:h-20 lg:px-8">
         <Link href="#top" className="flex cursor-pointer items-center">
           <Image
-            src="/images/logo.png"
+            src={`${BASE_PATH}/images/logo.png`}
             alt={dictionary.nav.logoAlt}
             width={390}
             height={100}

@@ -193,7 +193,7 @@ Remove it if it doesn't fit the merged site's visual language; it carries no con
       component when this page is merged in (see README "Integration notes").
 - [ ] `footer.contactEmail` / `footer.contactPhone`: placeholder contact details.
 
-## SEO / metadata (`app/fashion/page.tsx`)
+## SEO / metadata (`app/page.tsx`)
 
 - [ ] Title, meta description, Open Graph copy, and Twitter card copy are placeholder marketing copy;
       review against final SEO guidance. Copy was tuned this pass to explicitly mention "fashion, footwear,

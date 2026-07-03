@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useLanguage } from "@/lib/i18n/useLanguage";
 import { Container } from "@/components/fashion/ui/Container";
+import { BASE_PATH } from "@/lib/basePath";
 
 const FOOTER_LINK_HREFS = {
   product: ["#features", "#how-it-works", "#faq"],
@@ -18,7 +19,13 @@ export function Footer() {
       <Container>
         <div className="flex flex-wrap items-start justify-between gap-8">
           <div className="max-w-[300px]">
-            <Image src="/images/logo.png" alt={dictionary.nav.logoAlt} width={390} height={100} className="mb-4 h-7 w-auto" />
+            <Image
+              src={`${BASE_PATH}/images/logo.png`}
+              alt={dictionary.nav.logoAlt}
+              width={390}
+              height={100}
+              className="mb-4 h-7 w-auto"
+            />
             <p className="text-[14.5px] leading-relaxed text-ink-600">{footer.description}</p>
           </div>
 
@@ -56,7 +63,14 @@ export function Footer() {
 
         <div className="mt-11 flex flex-wrap items-center justify-between gap-3 border-t border-ink-900/[0.07] pt-[22px]">
           <span className="flex items-center gap-2.5 text-[13px] text-ink-400">
-            <Image src="/images/logo-icon.png" alt="" width={40} height={40} aria-hidden="true" className="h-5 w-5" />
+            <Image
+              src={`${BASE_PATH}/images/logo-icon.png`}
+              alt=""
+              width={40}
+              height={40}
+              aria-hidden="true"
+              className="h-5 w-5"
+            />
             {footer.copyright}
           </span>
           <span className="font-mono text-[11.5px] tracking-[0.04em] text-ink-400">{footer.madeLine}</span>
