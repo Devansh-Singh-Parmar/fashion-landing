@@ -31,7 +31,7 @@ export function CategoryMarquee() {
               className="flex items-center gap-3.5 whitespace-nowrap rounded-full border border-ink-900/10 bg-white px-6 py-4 transition-[border-color,box-shadow] duration-300 hover:border-brand-500 hover:shadow-[0_8px_24px_rgba(112,202,185,0.2)]"
             >
               <Icon className="h-7 w-7 text-brand-800" />
-              <span className="font-display text-2xl font-semibold text-ink-900">{item}</span>
+              <span className="font-sans text-2xl font-bold text-ink-900">{item}</span>
             </span>
           );
         })}

@@ -67,7 +67,7 @@ export function CTABand() {
         delay={0.1}
         className="mx-auto mt-14 max-w-2xl scroll-mt-24 text-center sm:mt-16"
       >
-        <h3 className="font-display text-2xl font-medium text-ink-900">
+        <h3 className="font-sans text-2xl font-bold text-ink-900">
           {contactForm.heading}
         </h3>
         <p className="mt-2 text-sm text-ink-600">{contactForm.subheading}</p>

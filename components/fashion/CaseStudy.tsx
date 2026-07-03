@@ -55,7 +55,7 @@ export function CaseStudy() {
                 key={quote.name}
                 className={
                   index === 0
-                    ? "m-0 border-l-2 border-brand-500 pl-5 font-display text-[clamp(19px,2.4vw,25px)] italic leading-[1.4] text-[#F6F3EE]"
+                    ? "m-0 border-l-2 border-brand-500 pl-5 font-sans text-[clamp(19px,2.4vw,25px)] italic font-medium leading-[1.4] text-[#F6F3EE]"
                     : "m-0 border-l-2 border-white/10 pl-5 text-[15.5px] leading-relaxed text-[#c7d0cc]"
                 }
               >

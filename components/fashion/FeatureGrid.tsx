@@ -38,7 +38,7 @@ export function FeatureGrid() {
               <div className="mb-4 text-brand-800">
                 <Icon className="h-[26px] w-[26px]" strokeWidth={2.1} aria-hidden="true" />
               </div>
-              <h3 className="mb-2 font-display text-[19px] font-semibold text-ink-900">{item.title}</h3>
+              <h3 className="mb-2 font-sans text-[19px] font-bold text-ink-900">{item.title}</h3>
               <p className="text-[14.5px] leading-relaxed text-ink-600">{item.description}</p>
             </div>
           </Reveal>

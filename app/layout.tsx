@@ -1,26 +1,26 @@
 import type { Metadata, Viewport } from "next";
-import { Bodoni_Moda, Hanken_Grotesk, Space_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 
-const hankenGrotesk = Hanken_Grotesk({
+const geistSans = Geist({
   subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-geist-sans",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const bodoniModa = Bodoni_Moda({
+const geistMono = Geist_Mono({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-geist-mono",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
 });
 
-const spaceMono = Space_Mono({
+// Static weights only (Poppins isn't variable) — 500/600 are the only weights
+// actually used for display headings and stat numbers across the site.
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-poppins",
+  weight: ["500", "600"],
   display: "swap",
-  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -38,8 +38,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${hankenGrotesk.variable} ${bodoniModa.variable} ${spaceMono.variable}`}>
-      <body>{children}</body>
+    <html lang="en">
+      <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} font-sans antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

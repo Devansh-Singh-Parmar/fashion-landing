@@ -52,7 +52,7 @@ export const en: Dictionary = {
       "Fashion has different economics than the rest of ecommerce: high return rates, tight size and fit expectations, and customers who judge you on unboxing. Zineps is built around that reality.",
     items: {
       multiCarrier: {
-        title: "Rates that beat singlecarrier deals",
+        title: "Rates that beat single carrier deals",
         description:
           "Compare every carrier at once and auto route each parcel to the cheapest or fastest option, no more overpaying on a contract that never fit your volume.",
       },

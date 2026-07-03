@@ -20,7 +20,7 @@ export function HowItWorks() {
       <ol className="mt-14 grid gap-9 sm:grid-cols-2 lg:grid-cols-4">
         {howItWorks.steps.map((step, index) => (
           <Reveal key={step.title} as="li" delay={index * 0.1} className="group relative">
-            <div className="font-display text-[56px] font-semibold leading-none text-brand-500 opacity-90 transition-transform duration-300 group-hover:-translate-y-1">
+            <div className="font-sans text-[56px] font-bold leading-none text-brand-500 opacity-90 transition-transform duration-300 group-hover:-translate-y-1">
               {String(index + 1).padStart(2, "0")}
             </div>
             <h3 className="mt-3.5 text-[19px] font-bold text-ink-900">{step.title}</h3>

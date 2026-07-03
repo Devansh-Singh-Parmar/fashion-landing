@@ -64,9 +64,9 @@ const config: Config = {
         "cta-gradient": "linear-gradient(135deg, #1A1A1A 0%, #1C2B27 100%)",
       },
       fontFamily: {
-        sans: ["var(--font-body)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "system-ui", "serif"],
-        mono: ["var(--font-mono)", "monospace"],
+        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        mono: ["var(--font-geist-mono)", "monospace"],
       },
       borderRadius: {
         xl2: "1.25rem",

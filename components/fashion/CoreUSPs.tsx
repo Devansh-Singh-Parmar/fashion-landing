@@ -50,7 +50,7 @@ export function CoreUSPs() {
                     {item.badge}
                   </span>
                 ) : null}
-                <h3 className="mt-[22px] font-display text-[23px] font-semibold text-ink-900">{item.title}</h3>
+                <h3 className="mt-[22px] font-sans text-[23px] font-bold text-ink-900">{item.title}</h3>
                 <p className="mt-2.5 text-[15.5px] leading-relaxed text-ink-600">{item.description}</p>
               </div>
             </TiltCard>

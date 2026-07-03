@@ -18,7 +18,9 @@ minimal rework. See **Integration notes** below.
 - A fixed scroll-progress bar and a section dot-nav (`ScrollProgress` / `SectionScroller`) pair with a
   CSS `scroll-snap-type: y proximity` on every section for a gentle "settle into place" feel without
   trapping the scroll
-- next/font (Bodoni Moda + Hanken Grotesk + Space Mono) for font optimization
+- next/font (Geist + Geist Mono + Poppins, matching zineps.com's own production font stack) for font
+  optimization — Poppins (500/600 only) is scoped to the hero headline, section headings, and case-study
+  stat numbers; Geist is the default body/UI font everywhere else
 - next/image for all imagery
 - No CMS, no database, static marketing page with a placeholder API route for the contact form
 

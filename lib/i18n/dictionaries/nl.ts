@@ -52,7 +52,7 @@ export const nl: Dictionary = {
       "Fashion kent andere economische wetten dan de rest van ecommerce: hoge retourpercentages, strikte verwachtingen over pasvorm, en klanten die je beoordelen op de unboxingervaring. Zineps is daarop gebouwd.",
     items: {
       multiCarrier: {
-        title: "Tarieven die singlecarrier deals verslaan",
+        title: "Tarieven die single carrier deals verslaan",
         description:
           "Vergelijk elke carrier tegelijk en stuur elk pakket automatisch naar de goedkoopste of snelste optie, nooit meer te veel betalen voor een contract dat nooit paste bij je volume.",
       },

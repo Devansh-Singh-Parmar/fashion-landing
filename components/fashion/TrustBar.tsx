@@ -6,10 +6,10 @@ import { Reveal } from "@/components/fashion/motion/Reveal";
 import { cx } from "@/components/fashion/ui/cx";
 
 const LOGO_STYLES = [
-  "font-display text-2xl font-semibold tracking-wide",
+  "font-sans text-2xl font-bold tracking-wide",
   "font-mono text-xl font-bold",
   "font-sans text-[23px] font-extrabold tracking-tight",
-  "font-display text-2xl italic font-medium",
+  "font-sans text-2xl italic font-semibold",
   "font-sans text-[22px] font-light tracking-[0.22em]",
 ];
 
