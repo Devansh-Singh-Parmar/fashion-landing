@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
-  basePath: "/",
+  basePath: "/fashion",
 
   assetPrefix: "https://zineps-landing-pages.vercel.app/",
 
