@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { CheckCircle2, AlertCircle } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/useLanguage";
 import { Button } from "@/components/fashion/ui/Button";
+import { BASE_PATH } from "@/lib/basePath";
 
 type SubmitState = "idle" | "submitting" | "success" | "error";
 
@@ -21,7 +22,7 @@ export function ContactForm() {
     const payload = Object.fromEntries(formData.entries());
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(`${BASE_PATH}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

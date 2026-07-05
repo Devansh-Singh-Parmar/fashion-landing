@@ -9,7 +9,10 @@ interface ContactPayload {
   message?: string;
 }
 
-const CONTACT_INBOX = "info@zineps.com";
+// TEMP: Resend's sandbox mode (no verified domain yet) only allows delivery to
+// the account's own email. Once zineps.com is verified in Resend, switch this
+// back to ["mani@zineps.com", "devansh@zineps.com", "dirkjan@zineps.com"].
+const CONTACT_INBOX = "devansh@zineps.com";
 
 // Resend's shared sandbox sender, works immediately with no domain setup.
 // Once the zineps.com domain is verified in Resend, switch this to something

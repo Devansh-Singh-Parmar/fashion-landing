@@ -2,7 +2,9 @@
 
 import { useEffect, useRef } from "react";
 import type { MouseEvent as ReactMouseEvent, CSSProperties } from "react";
+import Image from "next/image";
 import { animate, motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
+import { BASE_PATH } from "@/lib/basePath";
 import {
   Bell,
   Bookmark,
@@ -136,13 +138,8 @@ export function HeroMockUI({ imageAlt }: HeroMockUIProps) {
       >
         {/* icon sidebar */}
         <div className="hidden w-14 shrink-0 flex-col items-center gap-4 border-r border-ink-900/[0.06] py-4 sm:flex">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full border border-brand-500/40 text-brand-600">
-            <svg viewBox="0 0 100 100" className="h-4 w-4" aria-hidden="true">
-              <g fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round">
-                <circle cx="50" cy="50" r="38" />
-                <path d="M32 62l14-16 10 10 20-24" />
-              </g>
-            </svg>
+          <span className="flex h-8 w-8 items-center justify-center rounded-full border border-brand-500/40">
+            <Image src={`${BASE_PATH}/logo/Group.png`} alt="" width={16} height={16} className="h-4 w-4 object-contain" />
           </span>
           <span className="flex h-7 w-7 items-center justify-center rounded-[8px] bg-ink-900 text-white">
             <Plus className="h-3.5 w-3.5" />
