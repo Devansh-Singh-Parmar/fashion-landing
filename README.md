@@ -8,3 +8,4 @@ Use it as you use a landing page normally.
 Claude Code was used to to design/code the project.
 
 Update: the demo form is working now.
+Update 2: I work for Zineps and have hosted at the domain myself! Other link can be seen at https://zineps-landing-pages.vercel.app/fashion
