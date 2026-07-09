@@ -31,15 +31,20 @@ export function FeatureGrid() {
         <p className="max-w-[34ch] text-[15.5px] leading-relaxed text-ink-600">{featureGrid.subheading}</p>
       </Reveal>
 
-      <div className="grid grid-cols-1 gap-px overflow-hidden rounded-[18px] border border-ink-900/[0.09] bg-ink-900/[0.09] sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 border-t border-ink-900/[0.12] sm:grid-cols-2 sm:gap-x-12 lg:gap-x-20">
         {items.map(({ icon: Icon, item }, index) => (
-          <Reveal key={item.title} delay={(index % 3) * 0.08} className="h-full">
-            <div className="h-full bg-white p-[30px] transition-colors duration-300 hover:bg-[#F3FAF7]">
-              <div className="mb-4 text-brand-800">
-                <Icon className="h-[26px] w-[26px]" strokeWidth={2.1} aria-hidden="true" />
+          <Reveal key={item.title} delay={(index % 2) * 0.08}>
+            <div className="group flex cursor-pointer gap-5 border-b border-ink-900/[0.12] py-8 sm:py-9">
+              <span className="mt-1 font-mono text-[13px] tabular-nums text-ink-300 transition-colors duration-150 group-hover:text-brand-700">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div className="flex-1">
+                <div className="mb-2.5 flex items-start gap-3 text-brand-800">
+                  <Icon className="mt-[3px] h-[22px] w-[22px] shrink-0" strokeWidth={2.1} aria-hidden="true" />
+                  <h3 className="font-sans text-[19px] font-bold text-ink-900">{item.title}</h3>
+                </div>
+                <p className="text-[14.5px] leading-relaxed text-ink-600">{item.description}</p>
               </div>
-              <h3 className="mb-2 font-sans text-[19px] font-bold text-ink-900">{item.title}</h3>
-              <p className="text-[14.5px] leading-relaxed text-ink-600">{item.description}</p>
             </div>
           </Reveal>
         ))}

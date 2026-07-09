@@ -5,7 +5,6 @@ import { Route, Globe2, Gift } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/useLanguage";
 import { Section } from "@/components/fashion/ui/Section";
 import { Reveal } from "@/components/fashion/motion/Reveal";
-import { TiltCard } from "@/components/fashion/motion/TiltCard";
 import { GarmentTagIcon } from "@/components/fashion/icons";
 import type { IconProps } from "@/components/fashion/icons";
 import type { CoreUspItem } from "@/lib/i18n/dictionaries/types";
@@ -33,27 +32,25 @@ export function CoreUSPs() {
       <div className="mt-14 grid gap-[22px] sm:grid-cols-2 lg:grid-cols-3">
         {items.map(({ icon: Icon, item, tint }, index) => (
           <Reveal key={item.title} delay={index * 0.1}>
-            <TiltCard maxTilt={5}>
-              <div className="flex h-full flex-col items-start rounded-2xl border border-ink-900/[0.08] bg-white p-8 shadow-[0_1px_2px_rgba(20,50,44,0.05)] transition-all duration-300 ease-out-expo hover:-translate-y-1.5 hover:border-brand-300 hover:shadow-[0_24px_50px_-24px_rgba(20,50,44,0.35)] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
-                <span
-                  className={
-                    tint === "brand"
-                      ? "flex h-14 w-14 items-center justify-center rounded-[13px] bg-brand-100 text-brand-800"
-                      : "flex h-14 w-14 items-center justify-center rounded-[13px] bg-clay-100 text-clay-700"
-                  }
-                >
-                  <Icon className="h-[30px] w-[30px]" aria-hidden="true" />
+            <div className="flex h-full cursor-pointer flex-col items-start rounded-2xl border border-ink-900/[0.08] bg-white p-8 shadow-[0_1px_2px_rgba(20,50,44,0.05)] transition-[border-color,box-shadow] duration-150 hover:border-brand-300 hover:shadow-[0_2px_10px_rgba(20,50,44,0.08)]">
+              <span
+                className={
+                  tint === "brand"
+                    ? "flex h-14 w-14 items-center justify-center rounded-[13px] bg-brand-100 text-brand-800"
+                    : "flex h-14 w-14 items-center justify-center rounded-[13px] bg-clay-100 text-clay-700"
+                }
+              >
+                <Icon className="h-[30px] w-[30px]" aria-hidden="true" />
+              </span>
+              {item.badge ? (
+                <span className="mt-[22px] inline-flex items-center gap-1.5 rounded-full bg-clay-500 px-3 py-1 text-xs font-semibold text-white">
+                  <Gift className="h-3.5 w-3.5" aria-hidden="true" />
+                  {item.badge}
                 </span>
-                {item.badge ? (
-                  <span className="mt-[22px] inline-flex items-center gap-1.5 rounded-full bg-clay-500 px-3 py-1 text-xs font-semibold text-white">
-                    <Gift className="h-3.5 w-3.5" aria-hidden="true" />
-                    {item.badge}
-                  </span>
-                ) : null}
-                <h3 className="mt-[22px] font-sans text-[23px] font-bold text-ink-900">{item.title}</h3>
-                <p className="mt-2.5 text-[15.5px] leading-relaxed text-ink-600">{item.description}</p>
-              </div>
-            </TiltCard>
+              ) : null}
+              <h3 className="mt-[22px] font-sans text-[23px] font-bold text-ink-900">{item.title}</h3>
+              <p className="mt-2.5 text-[15.5px] leading-relaxed text-ink-600">{item.description}</p>
+            </div>
           </Reveal>
         ))}
       </div>
