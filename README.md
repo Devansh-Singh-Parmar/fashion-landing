@@ -9,3 +9,10 @@ Claude Code was used to to design/code the project.
 
 Update: the demo form is working now.
 Update 2: I work for Zineps and have hosted at the domain myself! Other link can be seen at https://zineps-landing-pages.vercel.app/fashion
+
+Developer Instructions:
+
+1. Clone the repository.
+2. Run `npm install` to install dependencies.
+3. Run `npm run dev` to start the server.
+4. Make a '.env' file in the root directory and add your environment variables of Resend.
