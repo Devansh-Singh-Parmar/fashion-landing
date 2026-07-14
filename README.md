@@ -8,7 +8,8 @@ Use it as you use a landing page normally.
 Claude Code was used to to design/code the project.
 
 Update: the demo form is working now.
-Update 2: I work for Zineps and have hosted at the domain myself! Other link can be seen at https://zineps-landing-pages.vercel.app/fashion
+Update 2: I **work** for Zineps and have hosted at the domain myself! Other link can be seen at https://zineps-landing-pages.vercel.app/fashion
+Update 3: The vercel link above is the testing link and both the sites [zineps.com/fashion](https://zineps.com/fashion) and https://zineps-landing-pages.vercel.app/fashion run from this code and area single vercel repositry. Vercel provides two urls's for a project, a test and a live domain link, https://zineps-landing-pages.vercel.app/fashion is the testing link and attached here for just in case. The main link is https://zineps.com/fashion.
 
 Developer Instructions:
 
